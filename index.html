@@ -1,95 +1,141 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>أبشر توأمي</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>أبشر توأمي الرقمي</title>
+
   <style>
     body {
       margin: 0;
-      font-family: "Tahoma", sans-serif;
-      background: linear-gradient(135deg, #f5f9f7, #e6f2ed);
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: linear-gradient(180deg, #0f8f6f, #0b6e56);
+      min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
-      color: #1f3d33;
+    }
+
+    .phone {
+      width: 360px;
+      background: #f9f9f9;
+      border-radius: 28px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+      overflow: hidden;
+    }
+
+    .header {
+      background: #0f8f6f;
+      color: white;
+      padding: 24px 20px;
+      text-align: center;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .header p {
+      margin-top: 8px;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    .content {
+      padding: 20px;
     }
 
     .card {
-      background: #ffffff;
-      border-radius: 20px;
-      width: 90%;
-      max-width: 420px;
-      padding: 30px 25px;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-      text-align: right;
+      background: white;
+      border-radius: 16px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
     }
 
-    h1 {
-      color: #0f6d4f;
-      font-size: 28px;
-      margin-bottom: 10px;
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 16px;
+      color: #0f8f6f;
     }
 
-    .subtitle {
-      font-size: 15px;
-      color: #4a6f63;
-      margin-bottom: 25px;
-      line-height: 1.8;
+    .card p {
+      font-size: 14px;
+      color: #333;
+      line-height: 1.7;
     }
 
-    ul {
+    .features li {
       list-style: none;
-      padding: 0;
-      margin: 0 0 25px 0;
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: #333;
     }
 
-    ul li {
-      margin-bottom: 12px;
-      font-size: 15px;
-      padding-right: 22px;
-      position: relative;
-    }
-
-    ul li::before {
-      content: "✓";
-      position: absolute;
-      right: 0;
-      color: #0f6d4f;
+    .features li::before {
+      content: "✔";
+      color: #0f8f6f;
+      margin-left: 8px;
       font-weight: bold;
     }
 
     .footer {
-      font-size: 13px;
-      color: #6b8c80;
       text-align: center;
-      border-top: 1px solid #e0ece7;
-      padding-top: 15px;
+      font-size: 12px;
+      color: #777;
+      padding: 12px;
     }
   </style>
 </head>
+
 <body>
 
-  <div class="card">
-    <h1>أبشر توأمي</h1>
+  <div class="phone">
 
-    <div class="subtitle">
-      توأمك الرقمي الذكي داخل منصة أبشر، ينفّذ الإجراءات الحكومية نيابةً عنك،
-      ويتابع المواعيد، ويُنبّهك قبل أي استحقاق مهم.
+    <div class="header">
+      <h1>أبشر توأمي الرقمي</h1>
+      <p>نسختك الذكية داخل منصة أبشر</p>
     </div>
 
-    <ul>
-      <li>مخصص لكبار السن وذوي الهمم</li>
-      <li>تنفيذ تلقائي لتجديد الهوية، الرخصة، والجواز</li>
-      <li>ذكاء اصطناعي يفهم المستخدم بلغته</li>
-      <li>أمان عالي وتحكم كامل بالصلاحيات</li>
-      <li>تقليل الوقت والجهد والإجراءات اليدوية</li>
-    </ul>
+    <div class="content">
+
+      <div class="card">
+        <h2>ما هو أبشر توأمي؟</h2>
+        <p>
+          أبشر توأمي هو توأم رقمي ذكي يمثل المستخدم داخل منصة أبشر،
+          ينفذ الإجراءات الحكومية نيابةً عنه،
+          ويتابع المواعيد، التجديدات، والتنبيهات بشكل تلقائي وآمن.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>لماذا أبشر توأمي؟</h2>
+        <ul class="features">
+          <li>مصمم لكبار السن وذوي الهمم</li>
+          <li>تنفيذ تلقائي للإجراءات الحكومية</li>
+          <li>تنبيهات ذكية قبل انتهاء أي وثيقة</li>
+          <li>ذكاء اصطناعي يفهم المستخدم بلغته</li>
+          <li>تقليل الجهد، الوقت، والزيارات الحضورية</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>الرؤية</h2>
+        <p>
+          تحويل أبشر من منصة خدمات إلى شريك رقمي ذكي،
+          يرافق المستخدم ويخدمه بشكل استباقي،
+          مع أعلى معايير الأمان والخصوصية.
+        </p>
+      </div>
+
+    </div>
 
     <div class="footer">
-      مشروع أبشر توأمي – رؤية رقمية مستقبلية للخدمات الحكومية
+      مشروع تخرج | أبشر توأمي الرقمي
     </div>
+
   </div>
 
 </body>
