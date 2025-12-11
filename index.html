@@ -1,43 +1,71 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
   <title>أبشر توأمي</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0a7c66, #0f9d7a);
-      color: white;
-      text-align: center;
-      padding: 40px;
+      margin: 0;
+      font-family: "Tahoma", sans-serif;
+      background: linear-gradient(135deg, #f5f9f7, #e6f2ed);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: #1f3d33;
     }
+
     .card {
-      background: rgba(255,255,255,0.12);
+      background: #ffffff;
       border-radius: 20px;
-      padding: 30px;
-      max-width: 600px;
-      margin: auto;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    }
-    h1 {
-      margin-bottom: 15px;
-      font-size: 32px;
-    }
-    p {
-      font-size: 18px;
-      line-height: 1.8;
-    }
-    ul {
+      width: 90%;
+      max-width: 420px;
+      padding: 30px 25px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
       text-align: right;
     }
-    li {
+
+    h1 {
+      color: #0f6d4f;
+      font-size: 28px;
       margin-bottom: 10px;
     }
-    footer {
-      margin-top: 30px;
-      font-size: 14px;
-      opacity: 0.9;
+
+    .subtitle {
+      font-size: 15px;
+      color: #4a6f63;
+      margin-bottom: 25px;
+      line-height: 1.8;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 25px 0;
+    }
+
+    ul li {
+      margin-bottom: 12px;
+      font-size: 15px;
+      padding-right: 22px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: "✓";
+      position: absolute;
+      right: 0;
+      color: #0f6d4f;
+      font-weight: bold;
+    }
+
+    .footer {
+      font-size: 13px;
+      color: #6b8c80;
+      text-align: center;
+      border-top: 1px solid #e0ece7;
+      padding-top: 15px;
     }
   </style>
 </head>
@@ -45,21 +73,23 @@
 
   <div class="card">
     <h1>أبشر توأمي</h1>
-    <p>
-      توأمك الرقمي الذكي داخل منصة أبشر، ينفّذ إجراءاتك الحكومية،
-      ويذكّرك قبل أي موعد مهم.
-    </p>
+
+    <div class="subtitle">
+      توأمك الرقمي الذكي داخل منصة أبشر، ينفّذ الإجراءات الحكومية نيابةً عنك،
+      ويتابع المواعيد، ويُنبّهك قبل أي استحقاق مهم.
+    </div>
 
     <ul>
-      <li>✔️ مخصص لكبار السن وذوي الهمم</li>
-      <li>✔️ أمان عالي وتحكم كامل</li>
-      <li>✔️ ذكاء اصطناعي يفهمك بلغتك</li>
-      <li>✔️ تقليل الوقت والجهد</li>
+      <li>مخصص لكبار السن وذوي الهمم</li>
+      <li>تنفيذ تلقائي لتجديد الهوية، الرخصة، والجواز</li>
+      <li>ذكاء اصطناعي يفهم المستخدم بلغته</li>
+      <li>أمان عالي وتحكم كامل بالصلاحيات</li>
+      <li>تقليل الوقت والجهد والإجراءات اليدوية</li>
     </ul>
 
-    <footer>
-      مشروع أبشر توأمي – رؤية مستقبلية للخدمات الحكومية
-    </footer>
+    <div class="footer">
+      مشروع أبشر توأمي – رؤية رقمية مستقبلية للخدمات الحكومية
+    </div>
   </div>
 
 </body>
