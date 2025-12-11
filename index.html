@@ -9,134 +9,137 @@
     body {
       margin: 0;
       font-family: "Segoe UI", Tahoma, sans-serif;
-      background: linear-gradient(180deg, #0f8f6f, #0b6e56);
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      background: #f5f7f6;
+      color: #1f2d2b;
     }
 
-    .phone {
-      width: 360px;
-      background: #f9f9f9;
-      border-radius: 28px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
-      overflow: hidden;
-    }
-
-    .header {
-      background: #0f8f6f;
+    header {
+      background: linear-gradient(135deg, #0b8f6a, #0f6f5c);
       color: white;
-      padding: 24px 20px;
+      padding: 30px 20px;
       text-align: center;
     }
 
-    .header h1 {
+    header h1 {
       margin: 0;
-      font-size: 22px;
+      font-size: 28px;
       font-weight: bold;
     }
 
-    .header p {
-      margin-top: 8px;
-      font-size: 14px;
-      opacity: 0.9;
+    header p {
+      margin-top: 10px;
+      font-size: 15px;
+      opacity: 0.95;
     }
 
-    .content {
+    .container {
       padding: 20px;
+      max-width: 900px;
+      margin: auto;
     }
 
     .card {
       background: white;
-      border-radius: 16px;
-      padding: 16px;
-      margin-bottom: 16px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
     }
 
     .card h2 {
-      margin: 0 0 10px;
-      font-size: 16px;
-      color: #0f8f6f;
+      color: #0b8f6a;
+      margin-bottom: 10px;
+      font-size: 20px;
     }
 
     .card p {
-      font-size: 14px;
-      color: #333;
       line-height: 1.7;
+      font-size: 15px;
     }
 
-    .features li {
-      list-style: none;
+    ul {
+      padding-right: 20px;
+    }
+
+    ul li {
       margin-bottom: 10px;
-      font-size: 14px;
-      color: #333;
+      font-size: 15px;
     }
 
-    .features li::before {
-      content: "✔";
-      color: #0f8f6f;
-      margin-left: 8px;
-      font-weight: bold;
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
     }
 
-    .footer {
+    .feature {
+      background: #eef7f4;
+      border-radius: 12px;
+      padding: 15px;
+      border-right: 4px solid #0b8f6a;
+    }
+
+    footer {
       text-align: center;
-      font-size: 12px;
-      color: #777;
-      padding: 12px;
+      padding: 20px;
+      font-size: 13px;
+      color: #666;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="phone">
+<header>
+  <h1>أبشر توأمي الرقمي</h1>
+  <p>توأمك الذكي داخل منصة أبشر… ينفّذ عنك، ويتابع عنك، وينبّهك قبل أي موعد</p>
+</header>
 
-    <div class="header">
-      <h1>أبشر توأمي الرقمي</h1>
-      <p>نسختك الذكية داخل منصة أبشر</p>
-    </div>
+<div class="container">
 
-    <div class="content">
-
-      <div class="card">
-        <h2>ما هو أبشر توأمي؟</h2>
-        <p>
-          أبشر توأمي هو توأم رقمي ذكي يمثل المستخدم داخل منصة أبشر،
-          ينفذ الإجراءات الحكومية نيابةً عنه،
-          ويتابع المواعيد، التجديدات، والتنبيهات بشكل تلقائي وآمن.
-        </p>
-      </div>
-
-      <div class="card">
-        <h2>لماذا أبشر توأمي؟</h2>
-        <ul class="features">
-          <li>مصمم لكبار السن وذوي الهمم</li>
-          <li>تنفيذ تلقائي للإجراءات الحكومية</li>
-          <li>تنبيهات ذكية قبل انتهاء أي وثيقة</li>
-          <li>ذكاء اصطناعي يفهم المستخدم بلغته</li>
-          <li>تقليل الجهد، الوقت، والزيارات الحضورية</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h2>الرؤية</h2>
-        <p>
-          تحويل أبشر من منصة خدمات إلى شريك رقمي ذكي،
-          يرافق المستخدم ويخدمه بشكل استباقي،
-          مع أعلى معايير الأمان والخصوصية.
-        </p>
-      </div>
-
-    </div>
-
-    <div class="footer">
-      مشروع تخرج | أبشر توأمي الرقمي
-    </div>
-
+  <div class="card">
+    <h2>ما هو أبشر توأمي؟</h2>
+    <p>
+      أبشر توأمي هو مفهوم توأم رقمي ذكي لكل مواطن، يعمل داخل منصة أبشر
+      كنسخة رقمية موثوقة قادرة على تنفيذ الإجراءات الحكومية نيابةً عن المستخدم
+      بعد تفويض آمن ومحدد الصلاحيات.
+    </p>
   </div>
+
+  <div class="card">
+    <h2>كيف يخدمك التوأم الرقمي؟</h2>
+    <div class="features">
+      <div class="feature">تجديد الهوية الوطنية تلقائيًا</div>
+      <div class="feature">متابعة انتهاء الرخص والجواز</div>
+      <div class="feature">تنبيهات ذكية قبل أي موعد مهم</div>
+      <div class="feature">تنفيذ الإجراءات بدون تدخل يدوي</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>الفئات المستفيدة</h2>
+    <ul>
+      <li>كبار السن</li>
+      <li>ذوي الإعاقة وذوي الهمم</li>
+      <li>الأشخاص غير الملمين بالإجراءات الرقمية</li>
+      <li>كل من يرغب بتجربة حكومية أسهل وأذكى</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>الأمان والموثوقية</h2>
+    <p>
+      يعتمد أبشر توأمي على تفويض رسمي، تحقق بيومتري،
+      وصلاحيات مقيدة لضمان أعلى مستوى من الخصوصية
+      والامتثال للحوكمة الرقمية.
+    </p>
+  </div>
+
+</div>
+
+<footer>
+  مشروع أبشر توأمي – رؤية مستقبلية للتحول الرقمي الحكومي
+</footer>
 
 </body>
 </html>
