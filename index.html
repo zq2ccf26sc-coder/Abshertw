@@ -25,20 +25,27 @@ body{
   color:var(--dark);
 }
 
+/* App Frame */
 .app{
   max-width:430px;
-  margin:16px auto;
+  margin:20px auto 90px;
   background:var(--white);
   border-radius:28px;
   box-shadow:0 30px 80px rgba(0,0,0,.2);
   overflow:hidden;
+  animation:fadeIn .8s ease;
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(20px)}
+  to{opacity:1; transform:translateY(0)}
 }
 
 /* Header */
 .header{
   background:linear-gradient(135deg,var(--green),var(--green-dark));
   color:white;
-  padding:26px 20px 30px;
+  padding:28px 20px 32px;
   text-align:center;
 }
 .header h1{
@@ -51,7 +58,7 @@ body{
   opacity:.9;
 }
 
-/* Digital Twin Status */
+/* Twin Status */
 .twin{
   background:var(--white);
   margin:-22px 16px 16px;
@@ -72,6 +79,8 @@ body{
   font-size:12px;
   font-weight:bold;
 }
+
+/* Progress Animation */
 .progress{
   margin-top:12px;
 }
@@ -91,6 +100,11 @@ body{
   height:100%;
   width:88%;
   background:linear-gradient(90deg,var(--green),#12b886);
+  animation:load 2s ease;
+}
+@keyframes load{
+  from{width:0}
+  to{width:88%}
 }
 
 /* Content */
@@ -111,7 +125,7 @@ body{
 }
 .card p{
   font-size:14px;
-  line-height:1.7;
+  line-height:1.8;
 }
 
 /* Services */
@@ -130,15 +144,12 @@ body{
   color:var(--green);
 }
 
-/* Decision Engine */
-.decision{
-  background:#F9FFFD;
-  border-right:4px solid var(--green);
-  padding:12px;
-  border-radius:14px;
-  font-size:13px;
-  margin-bottom:10px;
+/* Difference */
+.highlight{
+  background:linear-gradient(135deg,#0B6E57,#0F8F73);
+  color:white;
 }
+.highlight h2{color:white}
 
 /* Footer */
 .footer{
@@ -148,6 +159,27 @@ body{
   padding:14px;
   border-top:1px solid #eee;
 }
+
+/* Bottom Nav */
+.nav{
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  background:white;
+  border-top:1px solid #ddd;
+  display:flex;
+  justify-content:space-around;
+  padding:10px 0;
+  font-size:12px;
+}
+.nav span{
+  color:var(--gray);
+}
+.nav span.active{
+  color:var(--green);
+  font-weight:bold;
+}
 </style>
 </head>
 
@@ -155,13 +187,11 @@ body{
 
 <div class="app">
 
-  <!-- Header -->
   <div class="header">
     <h1>أبشر توأمي الرقمي</h1>
     <p>Digital Twin Government Assistant</p>
   </div>
 
-  <!-- Twin Status -->
   <div class="twin">
     <div class="twin-top">
       <strong>التوأم الرقمي</strong>
@@ -173,15 +203,14 @@ body{
     </div>
   </div>
 
-  <!-- Content -->
   <div class="content">
 
     <div class="card">
       <h2>ما هو أبشر توأمي؟</h2>
       <p>
         أبشر توأمي هو <strong>توأم رقمي ذكي</strong> يمثل المستخدم داخل منصة أبشر،
-        يمتلك صلاحيات محددة، ويتخذ قرارات تلقائية لتنفيذ الإجراءات الحكومية
-        دون تدخل المستخدم.
+        يعمل باستقلالية، ويتخذ قرارات تلقائية لتنفيذ الإجراءات الحكومية
+        بعد تفويض المستخدم وبأعلى معايير الأمان.
       </p>
     </div>
 
@@ -191,23 +220,23 @@ body{
         <div class="service">🪪 تجديد الهوية</div>
         <div class="service">🚗 تجديد الرخصة</div>
         <div class="service">🛂 تجديد الجواز</div>
-        <div class="service">🔔 تنبيهات استباقية</div>
+        <div class="service">🔔 تنبيهات ذكية</div>
       </div>
     </div>
 
-    <div class="card">
-      <h2>محرك القرار الذكي</h2>
-      <div class="decision">✔️ رصد تاريخ الانتهاء</div>
-      <div class="decision">✔️ التحقق البيومتري</div>
-      <div class="decision">✔️ تنفيذ الإجراء تلقائيًا</div>
-      <div class="decision">✔️ إشعار المستخدم</div>
+    <div class="card highlight">
+      <h2>ليش مشروعنا مختلف؟</h2>
+      <p>
+        لأن المستخدم لا يضغط ولا يتابع…
+        <br><strong>التوأم الرقمي يفعل كل شيء عنه.</strong>
+      </p>
     </div>
 
     <div class="card">
       <h2>القيمة الوطنية</h2>
       <p>
-        يقلل الضغط على المكاتب الحكومية، يرفع جودة الحياة لكبار السن
-        وذوي الهمم، ويحوّل الحكومة إلى شريك رقمي ذكي يعمل استباقيًا.
+        يرفع جودة الحياة، يخدم كبار السن وذوي الهمم،
+        ويحوّل الحكومة من جهة انتظار إلى شريك رقمي استباقي.
       </p>
     </div>
 
@@ -217,6 +246,13 @@ body{
     نموذج ابتكاري | أبشر توأمي – Digital Twin Government Platform
   </div>
 
+</div>
+
+<div class="nav">
+  <span class="active">الرئيسية</span>
+  <span>الخدمات</span>
+  <span>التوأم</span>
+  <span>الحساب</span>
 </div>
 
 </body>
