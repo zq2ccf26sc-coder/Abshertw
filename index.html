@@ -10,7 +10,7 @@
   --green:#0B6E57;
   --green-dark:#064C3D;
   --green-soft:#EAF4F1;
-  --bg:#F4F7F6;
+  --bg:#F3F6F5;
   --white:#ffffff;
   --dark:#1E2E2B;
   --gray:#6B7C78;
@@ -25,50 +25,61 @@ body{
   color:var(--dark);
 }
 
+/* App Container */
 .app{
   max-width:430px;
-  margin:20px auto 80px;
+  margin:20px auto;
   background:var(--white);
   border-radius:28px;
-  box-shadow:0 30px 80px rgba(0,0,0,.2);
+  box-shadow:0 30px 80px rgba(0,0,0,.18);
   overflow:hidden;
 }
 
 /* Header */
 .header{
   background:linear-gradient(135deg,var(--green),var(--green-dark));
-  color:white;
+  color:#fff;
   padding:28px 20px 34px;
   text-align:center;
 }
-.header h1{margin:0;font-size:22px}
-.header p{margin-top:8px;font-size:14px;opacity:.9}
+.header h1{
+  margin:0;
+  font-size:22px;
+}
+.header p{
+  margin-top:6px;
+  font-size:13px;
+  opacity:.9;
+}
 
-/* Twin */
+/* Twin Status */
 .twin{
-  background:white;
-  margin:-22px 16px 16px;
+  background:#fff;
+  margin:-24px 16px 18px;
   border-radius:20px;
   padding:16px;
-  box-shadow:0 14px 35px rgba(0,0,0,.12);
+  box-shadow:0 14px 30px rgba(0,0,0,.12);
 }
 .twin-top{
   display:flex;
   justify-content:space-between;
   align-items:center;
 }
-.badge{
-  background:#DFF3EC;
+.status{
+  background:#E0F2EC;
   color:var(--green);
-  padding:6px 16px;
+  padding:6px 14px;
   border-radius:999px;
   font-size:12px;
-  font-weight:bold;
+  font-weight:700;
 }
-
-/* Progress */
-.progress{margin-top:12px}
-.progress small{color:var(--gray);font-size:12px}
+.progress{
+  margin-top:12px;
+}
+.progress small{
+  font-size:12px;
+  color:var(--gray);
+}
 .bar{
   height:8px;
   background:#eee;
@@ -80,17 +91,19 @@ body{
   display:block;
   height:100%;
   width:92%;
-  background:linear-gradient(90deg,var(--green),#12b886);
+  background:linear-gradient(90deg,var(--green),#18b59a);
 }
 
 /* Content */
-.content{padding:0 16px 16px}
+.content{
+  padding:0 16px 20px;
+}
 .card{
-  background:white;
+  background:#fff;
   border-radius:20px;
   padding:16px;
   margin-bottom:16px;
-  box-shadow:0 8px 20px rgba(0,0,0,.08);
+  box-shadow:0 8px 22px rgba(0,0,0,.08);
 }
 .card h2{
   margin:0 0 10px;
@@ -99,17 +112,10 @@ body{
 }
 .card p{
   font-size:14px;
-  line-height:1.9;
+  line-height:1.8;
 }
 
-/* Human Impact */
-.impact{
-  background:linear-gradient(135deg,#0B6E57,#0F8F73);
-  color:white;
-}
-.impact h2{color:white}
-
-/* Services */
+/* Grid Services */
 .services{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -125,14 +131,23 @@ body{
   color:var(--green);
 }
 
-/* Decision */
-.decision{
+/* Engine */
+.engine-step{
   background:#F9FFFD;
   border-right:4px solid var(--green);
   padding:12px;
   border-radius:14px;
   font-size:13px;
   margin-bottom:10px;
+}
+
+/* Highlight */
+.highlight{
+  background:linear-gradient(135deg,var(--green),#0f8f73);
+  color:white;
+}
+.highlight h2{
+  color:white;
 }
 
 /* Footer */
@@ -143,6 +158,27 @@ body{
   padding:14px;
   border-top:1px solid #eee;
 }
+
+/* Bottom Nav */
+.nav{
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  background:#fff;
+  border-top:1px solid #ddd;
+  display:flex;
+  justify-content:space-around;
+  padding:10px 0;
+  font-size:12px;
+}
+.nav span{
+  color:var(--gray);
+}
+.nav span.active{
+  color:var(--green);
+  font-weight:700;
+}
 </style>
 </head>
 
@@ -150,87 +186,85 @@ body{
 
 <div class="app">
 
+  <!-- Header -->
   <div class="header">
     <h1>أبشر توأمي الرقمي</h1>
-    <p>Digital Twin Government Assistant</p>
+    <p>Digital Twin Government Automation Platform</p>
   </div>
 
+  <!-- Twin Status -->
   <div class="twin">
     <div class="twin-top">
-      <strong>التوأم الرقمي</strong>
-      <span class="badge">مُفعل</span>
+      <strong>حالة التوأم الرقمي</strong>
+      <span class="status">مُفعل</span>
     </div>
     <div class="progress">
-      <small>جاهزية التوأم</small>
+      <small>مستوى الجاهزية التشغيلية</small>
       <div class="bar"><span></span></div>
     </div>
   </div>
 
+  <!-- Content -->
   <div class="content">
 
     <div class="card">
-      <h2>ما هو أبشر توأمي؟</h2>
+      <h2>تعريف النظام</h2>
       <p>
-        أبشر توأمي هو <strong>توأم رقمي ذكي</strong> يمثل المستخدم داخل منصة أبشر،
-        يعمل كوكيل رقمي موثوق يتولى تنفيذ الإجراءات الحكومية
-        نيابةً عن المستخدم بناءً على تفويض وصلاحيات محددة.
-      </p>
-    </div>
-
-    <!-- الأثر الإنساني -->
-    <div class="card impact">
-      <h2>الأثر الإنساني والاجتماعي</h2>
-      <p>
-        لأول مرة… لا يحتاج كبير السن أن يطلب مساعدة أحد،
-        ولا يحتاج الأصم أن ينتظر مترجمًا ليفهمه.
-        <br><br>
-        المنصة تفهمه، تحاكيه بلغته، وتخدمه مباشرة.
-        <br><br>
-        كثير من ذوي الإعاقة يعانون من شعور
-        أنهم <strong>مضطرون لطلب المساعدة</strong>.
-        <br><br>
-        <strong>أبشر توأمي يلغي هذا الشعور تمامًا…</strong>
-        ويمنحهم القوة، والاستقلالية،
-        والثقة بإنجاز كل شيء بأنفسهم.
-        <br><br>
-        كبار السن غالبًا يخافون من التقنية أو يشعرون
-        أنهم غير قادرين على مواكبتها،
-        لكن مع الشرح المبسّط، والصوت، والإشارة،
-        يشعرون بالأمان،
-        وبأن الحكومة تفكّر في راحتهم فعلًا.
-        <br><br>
-        هذا يمنحهم كرامة، وانتماء،
-        وشعورًا بأنهم جزء كامل من المجتمع،
-        ومع هذه الخدمة يشعرون براحة نفسية
-        لأن <strong>أبشر توأمي</strong>
-        يقوم بدور المساند الحقيقي لهم.
+        أبشر توأمي هو <strong>توأم رقمي ذكي</strong> يعمل داخل منصة أبشر،
+        يمثل المستخدم رقميًا، ويمتلك صلاحيات مفوضة لتنفيذ الإجراءات الحكومية
+        تلقائيًا باستخدام الذكاء الاصطناعي والحوكمة الرقمية.
       </p>
     </div>
 
     <div class="card">
-      <h2>الخدمات المؤتمتة</h2>
+      <h2>الأتمتة الحكومية</h2>
       <div class="services">
-        <div class="service">🪪 تجديد الهوية</div>
-        <div class="service">🚗 تجديد الرخصة</div>
-        <div class="service">🛂 تجديد الجواز</div>
-        <div class="service">🔔 تنبيهات استباقية</div>
+        <div class="service">🪪 تجديد الهوية تلقائيًا</div>
+        <div class="service">🚗 تجديد الرخص</div>
+        <div class="service">🛂 إدارة الجوازات</div>
+        <div class="service">💳 سداد الرسوم والمخالفات</div>
       </div>
     </div>
 
     <div class="card">
       <h2>محرك القرار الذكي</h2>
-      <div class="decision">✔️ رصد تلقائي للاحتياجات</div>
-      <div class="decision">✔️ تحقق بيومتري آمن</div>
-      <div class="decision">✔️ تنفيذ الإجراء دون تدخل المستخدم</div>
-      <div class="decision">✔️ إشعار المستخدم بالإنجاز</div>
+      <div class="engine-step">✔️ تحليل البيانات الحكومية</div>
+      <div class="engine-step">✔️ التحقق البيومتري متعدد العوامل</div>
+      <div class="engine-step">✔️ اتخاذ القرار الآلي</div>
+      <div class="engine-step">✔️ تنفيذ الإجراء وتوثيقه</div>
+    </div>
+
+    <div class="card highlight">
+      <h2>الميزة التنافسية</h2>
+      <p>
+        النظام لا ينتظر طلب المستخدم،
+        بل يعمل <strong>استباقيًا</strong> وفق سياسات محددة،
+        ويحوّل الخدمات الحكومية من تفاعل يدوي إلى تشغيل ذكي ذاتي.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>الأثر التقني</h2>
+      <p>
+        تقليل الحمل التشغيلي على الأنظمة الحكومية،
+        رفع دقة المعاملات،
+        وتقديم نموذج متقدم للحكومة الرقمية المعتمدة على التوأم الرقمي.
+      </p>
     </div>
 
   </div>
 
   <div class="footer">
-    نموذج ابتكاري | أبشر توأمي – Digital Twin Government Platform
+    نموذج ابتكاري | أبشر توأمي – Digital Twin Government System
   </div>
 
+</div>
+
+<div class="nav">
+  <span class="active">الرئيسية</span>
+  <span>الخدمات</span>
+  <span>المحرك</span>
+  <span>الإعدادات</span>
 </div>
 
 </body>
