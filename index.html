@@ -10,7 +10,7 @@
   --green:#0B6E57;
   --green-dark:#064C3D;
   --green-soft:#EAF4F1;
-  --bg:#F3F6F5;
+  --bg:#F4F7F6;
   --white:#ffffff;
   --dark:#1E2E2B;
   --gray:#6B7C78;
@@ -25,10 +25,10 @@ body{
   color:var(--dark);
 }
 
-/* App Container */
+/* App Frame */
 .app{
   max-width:430px;
-  margin:20px auto;
+  margin:18px auto 90px;
   background:var(--white);
   border-radius:28px;
   box-shadow:0 30px 80px rgba(0,0,0,.18);
@@ -38,8 +38,8 @@ body{
 /* Header */
 .header{
   background:linear-gradient(135deg,var(--green),var(--green-dark));
-  color:#fff;
-  padding:28px 20px 34px;
+  color:white;
+  padding:30px 20px;
   text-align:center;
 }
 .header h1{
@@ -47,38 +47,38 @@ body{
   font-size:22px;
 }
 .header p{
-  margin-top:6px;
-  font-size:13px;
+  margin-top:8px;
+  font-size:14px;
   opacity:.9;
 }
 
-/* Twin Status */
-.twin{
-  background:#fff;
-  margin:-24px 16px 18px;
+/* Status */
+.status{
+  background:white;
+  margin:-22px 16px 16px;
   border-radius:20px;
   padding:16px;
-  box-shadow:0 14px 30px rgba(0,0,0,.12);
+  box-shadow:0 14px 35px rgba(0,0,0,.12);
 }
-.twin-top{
+.status-top{
   display:flex;
   justify-content:space-between;
   align-items:center;
 }
-.status{
-  background:#E0F2EC;
+.badge{
+  background:#DFF3EC;
   color:var(--green);
   padding:6px 14px;
   border-radius:999px;
   font-size:12px;
-  font-weight:700;
+  font-weight:bold;
 }
 .progress{
   margin-top:12px;
 }
 .progress small{
-  font-size:12px;
   color:var(--gray);
+  font-size:12px;
 }
 .bar{
   height:8px;
@@ -91,19 +91,19 @@ body{
   display:block;
   height:100%;
   width:92%;
-  background:linear-gradient(90deg,var(--green),#18b59a);
+  background:linear-gradient(90deg,var(--green),#12b886);
 }
 
 /* Content */
 .content{
-  padding:0 16px 20px;
+  padding:0 16px 16px;
 }
 .card{
-  background:#fff;
+  background:white;
   border-radius:20px;
-  padding:16px;
+  padding:18px;
   margin-bottom:16px;
-  box-shadow:0 8px 22px rgba(0,0,0,.08);
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
 }
 .card h2{
   margin:0 0 10px;
@@ -112,10 +112,11 @@ body{
 }
 .card p{
   font-size:14px;
-  line-height:1.8;
+  line-height:1.9;
+  color:#333;
 }
 
-/* Grid Services */
+/* Services */
 .services{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -131,23 +132,14 @@ body{
   color:var(--green);
 }
 
-/* Engine */
-.engine-step{
+/* Decision List */
+.decision{
   background:#F9FFFD;
   border-right:4px solid var(--green);
   padding:12px;
   border-radius:14px;
   font-size:13px;
   margin-bottom:10px;
-}
-
-/* Highlight */
-.highlight{
-  background:linear-gradient(135deg,var(--green),#0f8f73);
-  color:white;
-}
-.highlight h2{
-  color:white;
 }
 
 /* Footer */
@@ -165,7 +157,7 @@ body{
   bottom:0;
   left:0;
   right:0;
-  background:#fff;
+  background:white;
   border-top:1px solid #ddd;
   display:flex;
   justify-content:space-around;
@@ -177,7 +169,7 @@ body{
 }
 .nav span.active{
   color:var(--green);
-  font-weight:700;
+  font-weight:bold;
 }
 </style>
 </head>
@@ -192,11 +184,11 @@ body{
     <p>Digital Twin Government Automation Platform</p>
   </div>
 
-  <!-- Twin Status -->
-  <div class="twin">
-    <div class="twin-top">
+  <!-- Status -->
+  <div class="status">
+    <div class="status-top">
       <strong>حالة التوأم الرقمي</strong>
-      <span class="status">مُفعل</span>
+      <span class="badge">مُفعل</span>
     </div>
     <div class="progress">
       <small>مستوى الجاهزية التشغيلية</small>
@@ -228,27 +220,26 @@ body{
 
     <div class="card">
       <h2>محرك القرار الذكي</h2>
-      <div class="engine-step">✔️ تحليل البيانات الحكومية</div>
-      <div class="engine-step">✔️ التحقق البيومتري متعدد العوامل</div>
-      <div class="engine-step">✔️ اتخاذ القرار الآلي</div>
-      <div class="engine-step">✔️ تنفيذ الإجراء وتوثيقه</div>
+      <div class="decision">✔️ تحليل البيانات الحكومية</div>
+      <div class="decision">✔️ التحقق البيومتري متعدد العوامل</div>
+      <div class="decision">✔️ اتخاذ القرار الآلي</div>
+      <div class="decision">✔️ تنفيذ الإجراء وتوثيقه</div>
     </div>
 
-    <div class="card highlight">
+    <div class="card">
       <h2>الميزة التنافسية</h2>
       <p>
-        النظام لا ينتظر طلب المستخدم،
-        بل يعمل <strong>استباقيًا</strong> وفق سياسات محددة،
-        ويحوّل الخدمات الحكومية من تفاعل يدوي إلى تشغيل ذكي ذاتي.
+        النظام لا ينتظر طلب المستخدم، بل يعمل <strong>استباقيًا</strong>
+        وفق سياسات محددة، ويحوّل الخدمات الحكومية من تفاعل يدوي
+        إلى تشغيل ذكي ذاتي قائم على التوأم الرقمي.
       </p>
     </div>
 
     <div class="card">
       <h2>الأثر التقني</h2>
       <p>
-        تقليل الحمل التشغيلي على الأنظمة الحكومية،
-        رفع دقة المعاملات،
-        وتقديم نموذج متقدم للحكومة الرقمية المعتمدة على التوأم الرقمي.
+        تقليل الحمل التشغيلي على الأنظمة الحكومية، رفع دقة المعاملات،
+        وتقديم نموذج متقدم للحكومة الرقمية المعتمدة على التوائم الرقمية.
       </p>
     </div>
 
